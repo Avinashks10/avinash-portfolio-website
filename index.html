@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +6,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">  <style>
     * {
       margin: 0;
       padding: 0;
@@ -18,10 +17,23 @@
     }
 
     body {
-      background-image: url(blackbg.jpg);
-      background-attachment: fixed;
+      background-color: black;
       color: white;
       font-family: 'Poppins', sans-serif;
+      position: relative;
+      opacity: 0;
+      transition: opacity 1s ease-in;
+    }
+
+    body.loaded {
+      opacity: 1;
+    }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
     }
 
     nav {
@@ -77,6 +89,8 @@
 
     .leftSection {
       font-size: 2rem;
+      animation: slideFade 1s ease forwards;
+      opacity: 0;
     }
 
     .leftSection .buttons {
@@ -91,6 +105,13 @@
       border-radius: 6px;
       font-size: 15px;
       cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .leftSection .btn:hover {
+      transform: scale(1.05);
+      background-color: rgb(247, 198, 125);
+      color: black;
     }
 
     .rightSection img {
@@ -128,82 +149,80 @@
       height: 2px;
       margin: 56px 0;
     }
+
     #topBtn:hover {
-  background-color: #9c97f1;
-}
-@media (max-width: 768px) {
-    nav {
+      background-color: #9c97f1;
+    }
+
+    @media (max-width: 768px) {
+      nav {
         flex-direction: column;
         height: auto;
         padding: 10px 0;
-    }
+      }
 
-    nav ul {
+      nav ul {
         flex-direction: column;
         gap: 10px;
         margin-top: 10px;
-    }
+      }
 
-    .firstSection {
+      .firstSection {
         flex-direction: column;
         align-items: center;
         text-align: center;
-    }
+      }
 
-    .firstSection > div {
+      .firstSection > div {
         width: 80%;
-    }
+      }
 
-    .leftSection {
+      .leftSection {
         font-size: 1.5rem;
-    }
+      }
 
-    .rightSection img {
+      .rightSection img {
         width: 200px;
         margin-top: 20px;
-    }
+      }
 
-    .btn {
+      .btn {
         width: 100%;
         font-size: 16px;
-    }
+      }
 
-    .secondSection {
+      .secondSection {
         padding: 0 20px;
         text-align: center;
-    }
+      }
 
-    form {
+      form {
         width: 100% !important;
         max-width: 100%;
+      }
     }
-}
-    h1 {
-  margin-top: 80px; 
-  margin-bottom: 20px;
-  font-size: 2rem;
-  text-align: center;
-}
-@media (max-width: 768px) {
-  h1 {
-    margin-top: 100px; 
-    font-size: 1.6rem;
-  }
-}
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
 
-  nav ul li {
-    margin: 0 10px;
-  }
-}
-  </style>
-</head>
+    h1 {
+      margin-top: 80px;
+      margin-bottom: 20px;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    @keyframes slideFade {
+      0% {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style></head>
 <body>
+  <div id="particles-js"></div>
   <header>
     <nav>
       <div class="left">Avinash's Portfolio</div>
@@ -227,11 +246,11 @@
         <span id="element"></span>
         <div class="buttons">
           <a href="Avinash's resume.pdf" download>
-  <button class="btn">Download Resume</button>
-</a>
+            <button class="btn">Download Resume</button>
+          </a>
           <a href="https://github.com/Avinashks10" target="_blank">
-  <button class="btn">Visit Github</button>
-</a>
+            <button class="btn">Visit Github</button>
+          </a>
         </div>
       </div>
       <div class="rightSection">
@@ -241,20 +260,19 @@
 
     <hr>
 
-    <section class="secondSection" id="about">
+    <section class="secondSection" id="about" data-aos="fade-up">
       <h1>About Me</h1>
       <div class="box"></div>
-        <p style="margin-top: 20px; line-height: 1.8; font-size: 1rem;">
+       <p style="margin-top: 20px; line-height: 1.8; font-size: 1rem;">
             I am <strong>Avinash K S</strong>, a passionate and results-driven <strong>Data Scientist and Analyst</strong> with a strong foundation in statistics, data visualization, and storytelling through numbers. I specialize in using tools like Python, SQL, and Excel to clean, analyze, and interpret data to help make data-driven decisions.I have a strong background in HTML, JavaScript and C++ which allows me to create dynamic and interactive websites. My experience includes building responsive user interfaces, integrating APIs, and ensuring seamless user experiences across devices.
     <br><br>
     I'm currently expanding my skills in machine learning and web development, combining the power of data with interactive user experiences. Whether it's uncovering insights from datasets or building responsive dashboards, I love solving real-world problems through data.
     <br><br>
     In my free time, I enjoy working on personal projects, reading about emerging technologies, and constantly challenging myself to learn more.
   </p>
-      
     </section>
 
-    <section class="secondSection" id="services">
+    <section class="secondSection" id="services" data-aos="fade-up">
       <h1>Services</h1>
       <div class="box"></div>
       <div style="display: flex; gap: 30px; flex-wrap: wrap; margin-top: 40px; font-size: 1rem;">
@@ -278,15 +296,13 @@
       <h3 style="color: rgb(247, 198, 125);">📉 Excel Automation</h3>
       <p>Automate boring tasks in Excel using formulas, pivot tables, and VBA to improve efficiency and reduce manual work.</p>
     </div>
-
   </div>
     </section>
 
-    <section class="secondSection" id="projects">
+    <section class="secondSection" id="projects" data-aos="fade-up">
       <h1>Projects</h1>
       <div class="box"></div>
-
-  <div style="display: flex; flex-direction: column; gap: 30px; margin-top: 40px; font-size: 1rem;">
+       <div style="display: flex; flex-direction: column; gap: 30px; margin-top: 40px; font-size: 1rem;">
 
     <!-- Beginner Projects -->
     <div>
@@ -331,59 +347,87 @@
 </section>
     </section>
 
-    <section class="secondSection" id="contact">
+    <section class="secondSection" id="contact" data-aos="fade-up">
       <h1>Contact Me</h1>
       <div class="box"></div>
+      <p style="margin: 20px 0; font-size: 1rem;">
+        Feel free to reach out for collaborations, freelance work, or just to connect...
+      </p>
 
-  <p style="margin: 20px 0; font-size: 1rem;">
-    Feel free to reach out for collaborations, freelance work, or just to connect! I'm always open to discussing new ideas or opportunities.
-  </p>
+      <div style="margin-top: 30px;">
+        <p><strong>Email:</strong> <a href="mailto:avinash27ks@gmail.com" style="color: skyblue;">avinash27ks@gmail.com</a></p>
+        <p><strong>Phone:</strong> <span style="color: lightgray;">8111911675</span></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/avinash-k-s" target="_blank" style="color: skyblue;">linkedin.com/in/avinash-k-s</a></p>
+      </div>
 
-  <div style="margin-top: 30px;">
-    <p><strong>Email:</strong> <a href="mailto:avinash27ks@gmail.com" style="color: skyblue;">avinash27ks@gmail.com</a></p>
-    <p><strong>Phone:</strong> <span style="color: lightgray;">8111911675</span></p>
-    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/avinash-k-s-630035326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" style="color: skyblue;">linkedin.com/in/avinash-k-s</a></p>
-  </div>
-
-  <form action="https://formspree.io/f/xanjpyvd" method="POST" style="margin-top: 40px; display: flex; flex-direction: column; gap: 15px; max-width: 400px;">
-  <input type="text" name="name" placeholder="Your Name" required style="padding: 10px; border-radius: 5px; border: none;">
-  <input type="email" name="email" placeholder="Your Email" required style="padding: 10px; border-radius: 5px; border: none;">
-  <textarea name="message" rows="5" placeholder="Your Message" required style="padding: 10px; border-radius: 5px; border: none;"></textarea>
-  <button type="submit" class="btn" style="width: 150px;">Send Message</button>
-</form>
-</section>
+      <form action="https://formspree.io/f/xanjpyvd" method="POST" style="margin-top: 40px; display: flex; flex-direction: column; gap: 15px; max-width: 400px;">
+        <input type="text" name="name" placeholder="Your Name" required style="padding: 10px; border-radius: 5px; border: none;">
+        <input type="email" name="email" placeholder="Your Email" required style="padding: 10px; border-radius: 5px; border: none;">
+        <textarea name="message" rows="5" placeholder="Your Message" required style="padding: 10px; border-radius: 5px; border: none;"></textarea>
+        <button type="submit" class="btn" style="width: 150px;">Send Message</button>
+      </form>
     </section>
   </main>
 
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>  <script>
     var typed = new Typed('#element', {
       strings: ['Data Scientist', 'Web Developer', 'Data Analyst'],
       typeSpeed: 100,
       backDelay: 1000,
       loop: true
     });
+  </script>  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 80 },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.3 },
+        size: { value: 3 },
+        move: {
+          enable: true,
+          speed: 1,
+          direction: "none",
+          out_mode: "out"
+        }
+      },
+      interactivity: {
+        events: {
+          onhover: { enable: true, mode: "repulse" }
+        }
+      }
+    });
+  </script>  <script>
+    window.addEventListener('load', () => {
+      document.body.classList.add('loaded');
+    });
   </script>
-  <button onclick="scrollToTop()" id="topBtn" title="Go to top"
-  style="position: fixed; bottom: 30px; right: 30px; z-index: 99; font-size: 18px; border: none; outline: none;
-         background-color: rgb(247, 198, 125); color: black; cursor: pointer; padding: 12px 16px; border-radius: 50px; display: none;">
-  ↑ Top
-</button>
-<script>
-  // Show/hide the button on scroll
-  window.onscroll = function () {
-    const btn = document.getElementById("topBtn");
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-      btn.style.display = "block";
-    } else {
-      btn.style.display = "none";
-    }
-  };
+    <button onclick="scrollToTop()" id="topBtn" title="Go to top"
+    style="position: fixed; bottom: 30px; right: 30px; z-index: 99; font-size: 18px; border: none; outline: none;
+           background-color: rgb(247, 198, 125); color: black; cursor: pointer; padding: 12px 16px; border-radius: 50px; display: none;">
+    ↑ Top
+  </button>
 
-  // Scroll to top when clicked
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-</script>
-</body>
+  <script>
+    // Show/hide the button on scroll
+    window.onscroll = function () {
+      const btn = document.getElementById("topBtn");
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    };
+
+    // Scroll to top when clicked
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+  </body>
 </html>
