@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Avinash K S</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">  <style></style>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    .blog-container {
+      max-width: 80vw;
+      margin: auto;
+      padding: 50px 0;
+    }
+    .blog-card {
+      background: #1e1e1e;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+      transition: transform 0.3s ease;
+    }
+    .blog-card:hover {
+      transform: scale(1.02);
+    }
+    .blog-card h2 {
+      color: rgb(247, 198, 125);
+      margin-bottom: 10px;
+    }
+    .blog-card p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #ddd;
+    }
+    .blog-card a {
+      text-decoration: none;
+      color: skyblue;
+      font-weight: bold;
+    }
+     @keyframes slideFade {
+      0% {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    #particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+/* Loader container */
+#preloader {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Spinner animation */
+.spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid rgb(247, 198, 125);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Smooth fade-in of body content */
+body {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+body.loaded {
+  opacity: 1;
+}
+.floating-return {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  background-color: rgb(247, 198, 125);
+  color: black;
+  padding: 10px 16px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+.floating-return:hover {
+  background-color: #b8905b;
+}
+  </style>
+</head>
+<body>
+    <a href="index.html" class="floating-return">⟵ Home</a>
+    <div id="preloader">
+  <div class="spinner"></div>
+</div>
+    <div id="particles-js"></div>
+  <section class="blog-container">
+    <h1 style="text-align:center; margin-bottom: 40px;">My Blog</h1>
+
+    <div class="blog-card">
+      <h2>🧠 Building My First AI Assistant</h2>
+      <p>Insights into how I used Python, speech recognition, and automation to create a voice-based assistant.</p>
+      <a href="AiBlog.html">Read more →</a>
+    </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+<!-- Particles configuration -->
+<script>
+  particlesJS("particles-js", {
+    particles: {
+      number: { value: 80 },
+      color: { value: "#ffffff" },
+      shape: { type: "circle" },
+      opacity: { value: 0.3 },
+      size: { value: 3 },
+      move: { enable: true, speed: 1 }
+    },
+    interactivity: {
+      events: {
+        onhover: { enable: true, mode: "repulse" }
+      }
+    }
+  });
+</script>
+<script>
+  window.addEventListener("load", function () {
+    // Fade in the page content
+    document.body.classList.add("loaded");
+    // Hide preloader
+    const preloader = document.getElementById("preloader");
+    if (preloader) {
+      preloader.style.display = "none";
+    }
+  });
+</script>
+</body>
+</html>
