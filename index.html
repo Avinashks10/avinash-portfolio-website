@@ -321,10 +321,24 @@ form button[type="submit"] {
   margin-top: 10px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
 }
+    form button[type="submit"].clicked {
+  animation: clickPulse 0.2s ease;
+}
 
 form button[type="submit"]:hover {
   background-color: rgb(255, 209, 100);
   transform: scale(1.05);
+}
+    @keyframes clickPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
   </style></head>
@@ -480,7 +494,7 @@ form button[type="submit"]:hover {
         <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/avinash-k-s-630035326/" target="_blank" style="color: skyblue;">linkedin.com/in/avinash-k-s-630035326</a></p>
       </div>
 
-      <form action="https://formspree.io/f/xanjpyvd" method="POST" style="margin-top: 40px; display: flex; flex-direction: column; gap: 15px; max-width: 400px;">
+      <form id="contactForm" action="https://formspree.io/f/xanjpyvd" method="POST" style="margin-top: 40px; display: flex; flex-direction: column; gap: 15px; max-width: 400px;">
         <input type="text" name="name" placeholder="Your Name" required style="padding: 10px; border-radius: 5px; border: none;">
         <input type="email" name="email" placeholder="Your Email" required style="padding: 10px; border-radius: 5px; border: none;">
         <textarea name="message" rows="5" placeholder="Your Message" required style="padding: 10px; border-radius: 5px; border: none;"></textarea>
@@ -572,5 +586,20 @@ form button[type="submit"]:hover {
     }
   });
 </script>
-  </body>
+  <script>
+  const form = document.getElementById('contactForm');
+  const sendBtn = form.querySelector('button[type="submit"]');
+
+  sendBtn.addEventListener('click', function (e) {
+    // Animate the click
+    sendBtn.classList.add('clicked');
+    setTimeout(() => sendBtn.classList.remove('clicked'), 200);
+
+    // Wait for Formspree to receive data, then clear the fields
+    setTimeout(() => {
+      form.reset(); // Clears all fields
+    }, 500); // Adjust delay if needed
+  });
+</script>
+</body>
 </html>
