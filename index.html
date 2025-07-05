@@ -23,6 +23,7 @@
       position: relative;
       opacity: 0;
       transition: opacity 1s ease-in;
+      -webkit-font-smoothing: antialiased;
     }
 
     body.loaded {
@@ -277,6 +278,53 @@
     margin-bottom: 20px;
     font-size: 1.5rem;
     text-align: left;
+}
+    /* Contact form input styling */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  font-size: 1rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: rgb(247, 198, 125);
+  box-shadow: 0 0 12px rgba(247, 198, 125, 0.6);
+}
+
+/* Beautify Send Message Button */
+form button[type="submit"] {
+  background-color: rgb(247, 198, 125);
+  color: black;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s;
+  margin-top: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+form button[type="submit"]:hover {
+  background-color: rgb(255, 209, 100);
+  transform: scale(1.05);
 }
 
   </style></head>
