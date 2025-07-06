@@ -340,14 +340,68 @@ form button[type="submit"]:hover {
     transform: scale(1);
   }
 }
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgb(247, 198, 125); /* glow effect */
+  padding: 5px;
+  border-radius: 6px;
+  background-color: black;
+}
 
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background: rgb(247, 198, 125);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  nav .right {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: black;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    z-index: 999;
+  }
+
+  nav .right.show {
+    display: flex;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
   </style></head>
 <body>
   <div id="particles-js"></div>
   <header>
     <nav>
       <div class="left">Avinash's Portfolio</div>
-      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <div class="hamburger" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
 <ul class="nav-links" id="navLinks">
   <li><a href="blog.html">Blog</a></li>
   <li><a href="#services">Services</a></li>
