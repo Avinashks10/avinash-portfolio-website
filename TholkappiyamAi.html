@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Tholkappiyam.Ai - Avinash's Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      padding: 40px;
+      line-height: 1.7;
+    }
+    h1 {
+      color: rgb(247, 198, 125);
+      margin-bottom: 20px;
+    }
+    a {
+      color: skyblue;
+    }
+  #particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+/* Loader container */
+#preloader {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Spinner animation */
+.spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid rgb(247, 198, 125);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Smooth fade-in of body content */
+body {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+body.loaded {
+  opacity: 1;
+}
+.floating-return {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  background-color: rgb(247, 198, 125);
+  color: black;
+  padding: 10px 16px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+.floating-return:hover {
+  background-color: #b8905b;
+}
+  </style>
+</head>
+<body>
+   <a href="blog.html" class="floating-return">⟵ Back to Blog</a>
+  <div id="preloader">
+  <div class="spinner"></div>
+</div>
+  <div id="particles-js"></div>
+  <h1>📌The Tholkappiyam.Ai </h1>
+  <h2>🔷 Project Overview</h2>
+<p>Tholkappiyam.AI is an interactive AI-powered web platform created to modernize the way people explore and learn from Tholkappiyam, one of the oldest surviving works of Tamil grammar and literature. This project brings together heritage and innovation, transforming a classical text into a dynamic and accessible digital experience for users of all ages.</p>
+
+<h2>🎯 Purpose & Goals</h2>
+<p>The central objective of Tholkappiyam.AI is to democratize access to Tamil classical knowledge. Users can type in questions in simple Tamil or English, and the platform uses AI to provide intelligent responses that are grounded in the text of Tholkappiyam. Whether you're a student, academic, or culture lover, the platform makes your interaction with ancient grammar more insightful and easy.</p>
+
+<h2>📱 UI/UX Design</h2>
+<p>Designed with simplicity, responsiveness, and clarity, the interface adapts gracefully across devices. The homepage greets users with a minimal layout, a question box, and an iconic image of Tholkappiyar. The hamburger menu is smooth and interactive—expanding neatly on mobile and automatically closing when tapping elsewhere on the screen, enhancing user experience without clutter.</p>
+
+<h2>📚 Text List Structure</h2>
+<p>The Text List page organizes Tholkappiyam into its traditional three divisions:
+
+Ezuththathikaaram (எழுத்ததிகாரம்) – focused on phonology.
+
+Sollathikaaram (சொல்லதிகாரம்) – focused on morphology and word formation.
+
+Yaappathikaaram (யாப்பதிகாரம்) – focused on prosody and poetic structure.
+
+Each section is presented using modern card-based UI components, making navigation and understanding intuitive for learners.</p>
+
+<h2>👥 About Us Page</h2>
+<p>This section provides a behind-the-scenes look at the vision and mission behind Tholkappiyam.AI. It explains the motivation to blend culture with code, emphasizing how technology can preserve, promote, and revive ancient Tamil knowledge in classrooms and beyond.</p>
+
+<h2>⚙️ Features & Functionality</h2>
+<p>✅ Live Questioning System: Users can type a question and instantly receive AI-generated answers.
+
+✅ Smooth Scroll & Cursor Focus: Clicking the "Ask a Question" button scrolls smoothly to the chat input and activates the blinking cursor to prompt user interaction.
+
+✅ Image Persistence: The Tholkappiyar image is optimized to always load fully, even in poor network conditions.
+
+✅ No Distractions: Unnecessary theme toggles (like dark/light mode) are excluded to maintain a consistent, focused experience.
+
+✅ Hamburger Menu UX: Opens neatly and disappears when clicked outside—crafted especially for mobile responsiveness.
+
+</p>
+
+<h2>🚀 Final Thoughts</h2>
+<p>Tholkappiyam.AI is more than just a web app—it is a living, breathing portal into Tamil heritage. By combining the depth of Tholkappiyam with the accessibility of AI and modern design, this project allows users to rediscover an ancient text in a futuristic format. It shows how technology can preserve culture, making it relevant and reachable in today's world.
+
+</p>
+
+  
+  <script>
+  particlesJS("particles-js", {
+    particles: {
+      number: { value: 80 },
+      color: { value: "#ffffff" },
+      shape: { type: "circle" },
+      opacity: { value: 0.3 },
+      size: { value: 3 },
+      move: { enable: true, speed: 1 }
+    },
+    interactivity: {
+      events: {
+        onhover: { enable: true, mode: "repulse" }
+      }
+    }
+  });
+</script>
+<script>
+  window.addEventListener("load", function () {
+    // Fade in the page content
+    document.body.classList.add("loaded");
+    // Hide preloader
+    const preloader = document.getElementById("preloader");
+    if (preloader) {
+      preloader.style.display = "none";
+    }
+  });
+</script>
+
+</body>
+</html>
