@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Tholkappiyam.Ai - Avinash's Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      padding: 40px;
+      line-height: 1.7;
+    }
+    h1 {
+      color: rgb(247, 198, 125);
+      margin-bottom: 20px;
+    }
+    a {
+      color: skyblue;
+    }
+  #particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+/* Loader container */
+#preloader {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Spinner animation */
+.spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid rgb(247, 198, 125);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Smooth fade-in of body content */
+body {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+body.loaded {
+  opacity: 1;
+}
+.floating-return {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  background-color: rgb(247, 198, 125);
+  color: black;
+  padding: 10px 16px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+.floating-return:hover {
+  background-color: #b8905b;
+}
+  </style>
+</head>
+<body>
+   <a href="blog.html" class="floating-return">⟵ Back to Blog</a>
+  <div id="preloader">
+  <div class="spinner"></div>
+</div>
+  <div id="particles-js"></div>
+  <h1>📈 My Journey with the National Entrepreneurship Challenge – IIT Bombay</h1>
+  <h2>Introduction</h2>
+<p>I am thrilled to announce that I, along with my team Algozen, am proudly representing Sree Saraswathi Thyagaraja College, Coimbatore in the National Entrepreneurship Challenge (NEC) conducted by the Entrepreneurship Cell (E-Cell), IIT Bombay. Taking on the role of Team Leader, I feel honored and motivated to guide a talented group of 15 members as we step into this exciting journey of innovation, collaboration, and impact.</p>
+
+<h2>What is the National Entrepreneurship Challenge?</h2>
+<p>The National Entrepreneurship Challenge is one of the largest and most prestigious initiatives in India that empowers students to build strong entrepreneurial ecosystems in their campuses. It is not just a competition but a structured program that takes us through multiple stages — from ideation and content creation to outreach, partnerships, and execution.
+
+Each module is designed to bring out the best in participants, pushing us to think creatively, work collaboratively, and develop real-world solutions while learning from India’s finest entrepreneurial networks.</p>
+
+<h2>About Team Algozen</h2>
+<p>For our team, Algozen, this challenge is more than just participation — it is a mission. We are driven to create activities, events, and opportunities that spark entrepreneurial thinking among students in our college.
+
+Through workshops, discussions, startup showcases, and collaborative initiatives, we aim to build a strong foundation for entrepreneurship and innovation on our campus. Our vision is not just to score points in this challenge, but to leave behind a sustainable culture of entrepreneurship that continues long after NEC concludes.</p>
+
+<h2>My Role as Team Leader</h2>
+<p>As a leader, I see this challenge as a chance to bring out the best in my teammates by assigning responsibilities, fostering creativity, and encouraging each member to showcase their unique strengths.
+
+The 15 of us form a diverse and dynamic team, united by the spirit of curiosity, resilience, and ambition. Together, we want to learn from failures, celebrate small wins, and grow as changemakers who can contribute to the entrepreneurial ecosystem of our nation.</p>
+
+<h2>Representing Our College on a National Platform</h2>
+<p>Representing Sree Saraswathi Thyagaraja College at a national-level platform like NEC fills us with immense pride. It gives us an opportunity to showcase the talent and potential of our institution, placing us among some of the most innovative minds in the country.
+
+We are eager to collaborate with mentors, connect with peers from different colleges, and gain insights that will sharpen our journey ahead.</p>
+
+<h2>Learning and Growth</h2>
+<p>I believe this experience will not only shape me as a leader but also help each member of Algozen grow as future entrepreneurs and innovators. With passion, persistence, and teamwork, we are committed to making the most out of this golden opportunity.</p>
+
+<h2>Looking Ahead</h2>
+<p>As we move forward, I will continue sharing updates about our progress, learnings, and milestones from this exciting journey.
+
+The National Entrepreneurship Challenge is not just a competition — it is the beginning of a movement, and I am truly grateful to be part of it. 🚀
+</p>
+
+  
+  <script>
+  particlesJS("particles-js", {
+    particles: {
+      number: { value: 80 },
+      color: { value: "#ffffff" },
+      shape: { type: "circle" },
+      opacity: { value: 0.3 },
+      size: { value: 3 },
+      move: { enable: true, speed: 1 }
+    },
+    interactivity: {
+      events: {
+        onhover: { enable: true, mode: "repulse" }
+      }
+    }
+  });
+</script>
+<script>
+  window.addEventListener("load", function () {
+    // Fade in the page content
+    document.body.classList.add("loaded");
+    // Hide preloader
+    const preloader = document.getElementById("preloader");
+    if (preloader) {
+      preloader.style.display = "none";
+    }
+  });
+</script>
+
+</body>
+</html>
