@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Success at the National Entrepreneurship Challenge - Avinash's Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      padding: 40px;
+      line-height: 1.7;
+    }
+    h1 {
+      color: rgb(247, 198, 125);
+      margin-bottom: 20px;
+    }
+    a {
+      color: skyblue;
+    }
+  #particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+/* Loader container */
+#preloader {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Spinner animation */
+.spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid rgb(247, 198, 125);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Smooth fade-in of body content */
+body {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+body.loaded {
+  opacity: 1;
+}
+.floating-return {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  background-color: rgb(247, 198, 125);
+  color: black;
+  padding: 10px 16px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+.floating-return:hover {
+  background-color: #b8905b;
+}
+  </style>
+</head>
+<body>
+   <a href="blog.html" class="floating-return">⟵ Back to Blog</a>
+  <div id="preloader">
+  <div class="spinner"></div>
+</div>
+  <div id="particles-js"></div>
+  <h1>Turning Dreams into Achievement: Securing Rank 6 in the National Entrepreneurship Challenge 🚀</h1>
+  <h2>A Milestone to Remember 🌟</h2>
+<p>Success is never achieved alone—it is built through teamwork, dedication, innovation, and the support of people who believe in a common vision. One of the proudest milestones of my academic journey was securing Rank 6 in the National Entrepreneurship Challenge (NEC) conducted by IIT Bombay. This achievement became even more meaningful because I had the opportunity to lead my team, Algozen, as the Team President, while proudly representing Sree Saraswathi Thyagaraja College.</p>
+
+<h2>Competing on a National Platform 💡</h2>
+<p>The National Entrepreneurship Challenge is one of India’s most prestigious entrepreneurial competitions, bringing together innovative and talented students from institutions across the country. Competing on such a national platform was both challenging and inspiring, pushing us to think creatively, solve problems strategically, and develop a strong entrepreneurial mindset.</p>
+
+<h2>My Role as Team President 👨‍💼🤝</h2>
+<p>As the Team President of Algozen, my role was not only to contribute ideas but also to guide, motivate, and coordinate the team throughout the competition journey. From organizing discussions and planning strategies to ensuring smooth teamwork and maintaining consistency, the experience helped me strengthen my leadership, communication, and decision-making skills. Leading a passionate and hardworking team taught me that true leadership is about inspiring others, staying united during challenges, and moving forward with confidence.</p>
+
+<h2>The Journey of Team Algozen 📈✨</h2>
+<p>Our team, Algozen, worked tirelessly with dedication and determination. Every brainstorming session, entrepreneurial task, and challenge became an opportunity to learn and grow together. Despite the pressure and competition, we remained focused on our vision and supported one another throughout the journey.</p>
+
+<h2>Representing Our College with Pride 🎓</h2>
+<p>Representing Sree Saraswathi Thyagaraja College on such a prestigious platform was a matter of immense pride and responsibility. The constant encouragement and support from our mentors and institution played a major role in motivating us to perform our best.</p>
+
+<h2>The Moment of Achievement 🏆</h2>
+<p>The moment the results were announced and we secured Rank 6 at the national level was unforgettable. It was a moment filled with happiness, gratitude, and pride—not only for me personally but for our entire team and college. This achievement stands as a reflection of teamwork, perseverance, leadership, and the belief that hard work always brings results.</p>
+
+<h2>Lessons and Inspiration for the Future 🚀</h2>
+<p>This experience has inspired me to continue exploring the fields of entrepreneurship, innovation, and leadership with greater confidence and ambition. More than just a rank, this journey became a life-changing learning experience that strengthened my belief in collaboration, vision, and determination.</p>
+
+<h2>A Proud Chapter in My Journey 🎉</h2>
+<p>I will always cherish this accomplishment as one of the most defining moments of my student life. Securing Rank 6 in the National Entrepreneurship Challenge at IIT Bombay as the Team President of Algozen, representing Sree Saraswathi Thyagaraja College, will forever remain a proud and inspiring chapter in my journey.</p>
+  
+  <script>
+  particlesJS("particles-js", {
+    particles: {
+      number: { value: 80 },
+      color: { value: "#ffffff" },
+      shape: { type: "circle" },
+      opacity: { value: 0.3 },
+      size: { value: 3 },
+      move: { enable: true, speed: 1 }
+    },
+    interactivity: {
+      events: {
+        onhover: { enable: true, mode: "repulse" }
+      }
+    }
+  });
+</script>
+<script>
+  window.addEventListener("load", function () {
+    // Fade in the page content
+    document.body.classList.add("loaded");
+    // Hide preloader
+    const preloader = document.getElementById("preloader");
+    if (preloader) {
+      preloader.style.display = "none";
+    }
+  });
+</script>
+
+</body>
+</html>
